@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #0f0f0f;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
+    .box {
+        max-width: 700px;
+        padding: 30px;
+        background: #1a1a1a;
+        border-radius: 10px;
+    }
+    input {
+        padding: 10px;
+        width: 80%;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    button {
+        padding: 10px 25px;
+        margin-top: 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .hint {
+        font-size: 14px;
+        color: #aaa;
+        margin-top: 10px;
+    }
+    .message {
+        display: none;
+        white-space: pre-wrap;
+        text-align: right;
+        line-height: 1.8;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <div id="login">
+        <h2>Enter the password</h2>
+        <input type="password" id="password" placeholder="Password">
+        <div class="hint">Hint: 6 digits — it’s my birthday</div>
+        <br>
+        <button onclick="check()">Open</button>
+        <p id="error" style="color:#ff6b6b;"></p>
+    </div>
+
+    <div id="message" class="message">
+مرحبا يا تاليا
+كيف حالك يا رب تكوني احسن؟
+انا طبعا يمكن هاي اخر طريقة اقدر احكي معك لانه كلشي مسكر 
+وتذكرت انو ايميلك عندي وقلبت الدنيا للاقيته
+وما حبيت اكتب الرسالة ع طول لاني ما بعرف يمكن ايميلك عند حد ثاني ف حبيت اسوي هاي الحركة تعبت وانا اسوي فيها.
+طبعا ايميلي وفيبوكي وايكلاودي والانستا كلهم تهكرو وصرلي يومين مهموم فيهم حتى لابتوبي كله فايروسات
+هاد مو موضوعنا انا جاي احكيلك كم شغلة،
+انا حرفيا صرلي من يوم المشكلة ما بنام، ما بدرس ،ما باكل، سجلت بالجيم عاساس اضيع وقت بس صراحة عالفاضي 
+مش مصدق اني سويت هيك
+مو مصدق ابدا ليش هيك عملت
+مو لاقي اي مبرر اي استيعاب انتي معك حق بكلشي ولله
+ولله يا تاليا انا اسف كثير 
+هاي المرة من كل قلبي
+من كل جزء فيي انا اسف
+...
+سيف ❤️
+    </div>
+</div>
+
+<script>
+function check() {
+    const pass = document.getElementById("password").value;
+    if (pass === "922004") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("message").style.display = "block";
+    } else {
+        document.getElementById("error").innerText = "Wrong password";
+    }
+}
+</script>
+
+</body>
+</html>
